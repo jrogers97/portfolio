@@ -14,16 +14,16 @@
 	<link href="https://fonts.googleapis.com/css?family=Oswald|Quattrocento+Sans" rel="stylesheet">
 
 	<!-- Favicons -->
-	<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-	<link rel="manifest" href="./site.webmanifest">
-	<link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+	<link rel="manifest" href="./favicons/site.webmanifest">
+	<link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5">
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#ffffff">
 
 	<script
-	  src="http://code.jquery.com/jquery-3.3.1.min.js"
+	  src="https://code.jquery.com/jquery-3.3.1.min.js"
 	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 	  crossorigin="anonymous">
 	</script>
@@ -42,6 +42,14 @@
 		<a href="#" class="learn-more"> Learn More </a>
 	</div>
 	
+	<!-- View Screenshot Modal -->
+	<div class="modal hidden">
+		    <div class="modal-content">
+		        <span class="close-button">&times;</span>
+		        <img class="modal-img" src="./images/macbook-poetry-mashup.png" />
+		    </div>
+		  </div>
+
 	<!-- Nav Bar -->
 	<nav class="nav">
 	   <a href="#" id="home" class="nav-link-home"> Home </a>
@@ -75,7 +83,7 @@
 		 				<img src="./icons/code.svg" class="icon"/>
 		 			</div>
 		 			<h2> Code </h2>
-		 			<p> I transform mockups and wireframes into polished, responsive websites using HTML and CSS. </p>
+		 			<p> I transform mockups and wireframes into polished, responsive websites using <span class="bold">HTML</span> and <span class="bold">CSS</span>. </p>
 		 		</div>
 
 		 		<div class="section section-develop">
@@ -83,7 +91,7 @@
 		 				<img src="./icons/gears.svg" class="icon"/>
 		 			</div>
 		 			<h2> Develop </h2>
-		 			<p> I develop and implement complex front-end systems using plain JavaScript, jQuery, and React/Redux. </p>
+		 			<p> I develop and implement complex front-end systems using plain <span class="bold">JavaScript</span>, <span class="bold">jQuery</span>, and <span class="bold">React/Redux</span>. </p>
 		 		</div>
 		 		
 	 		</div>
@@ -95,46 +103,46 @@
  	
  			<div class="project-section">
  				<div class="project-photo">
- 					<img src="./macbook-theory-trainer.png" />
+ 					<img src="./images/macbook-theory-trainer.png" />
  				</div>
  				<div class="project-words">
  					<h2 class="project-name"> Theory Trainer </h2>
  					<div class="horizontal-line"> </div>
- 					<p class="project-writeup"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat </p>
+ 					<p class="project-writeup"> Theory Trainer is a simple website built with <span class="bold">React</span> to help novice musicians study music theory through chord identification and ear training.</p>
  					<a href="http://theorytrainer.com/#/" class="project-button"> Visit Website</a>
  				</div>
  			
  			</div>
 
- 			<hr>
+ 			<div class="line"></div>
 
  			<div class="project-section">
  				<div class="project-photo-second">
- 					<img src="./macbook-image.png" />
+ 					<img src="./images/macbook-poetry-mashup.png" />
  				</div>
  				<div class="project-words-second">
- 					<h2 class="project-name"> Spot Plot </h2>
+ 					<h2 class="project-name"> Poetry Mashup </h2>
  					<div class="horizontal-line"> </div>
- 					<p class="project-writeup"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat </p>
- 					<a href="#" class="project-button"> Visit Website</a>
+ 					<p class="project-writeup"> Poetry Mashup is a prototype of a game built for the Boston Children's Museum using <span class="bold">React</span> that introduces children to different languages through poems. </p>
+ 					<a href="#" id="view-screenshot" class="project-button"> View Screenshot</a>
  				</div>
  			</div>
 
- 			<hr>
+ 			<div class="line"></div>
 
  			<div class="project-section">
  				<div class="project-photo">
- 					<img src="./macbook-image.png" />
+ 					<img src="./images/macbook-sudoku-solver.png" />
  				</div>
  				<div class="project-words">
- 					<h2 class="project-name"> Poetry Mashup </h2>
+ 					<h2 class="project-name"> Sudoku Solver </h2>
  					<div class="horizontal-line"> </div>
- 					<p class="project-writeup"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat </p>
- 					<a href="#" class="project-button"> Visit Website</a>
+ 					<p class="project-writeup"> Sudoku Solver is a website that solves any unfinished Sudoku board supplied by the user, built with simple <span class="bold">JavaScript</span>, <span class="bold">HTML</span>, and <span class="bold">CSS</span>. </p>
+ 					<a href="https://jrogers97.github.io/sudoku-solver/" class="project-button"> Visit Website</a>
  				</div>
  			</div>
 
- 			<hr>
+ 			<div class="line"></div>
 
  			<div class="see-more">
 	 			<h2> Want to see more?</h2>
@@ -148,7 +156,7 @@
 
 	 		<p> Want to learn more about my formal experience and skills? </p>
 
-	 		<a href="./Resume.pdf" download class="resume-button"> Download Resume </a>
+	 		<a href="./resume.pdf" download class="resume-button"> Download Resume </a>
 	 	</div>
 
  	<!-- Contact Section -->
@@ -158,7 +166,7 @@
 	 		<p class="contact-writeup"> Tell me about it! </p>
 	 		<div class="contact-inputs">
 	 			<form action="https://formspree.io/jacob.rogers97@gmail.com"
-				      method="POST">
+				      method="POST">	
 				    <input type="text" class="input-name" name="name" placeholder="Name*" required>
 				    <input type="email" class="input-email" name="_replyto" placeholder="Email*" required>
 				    <textarea type="textarea" class="input-message" name="message" placeholder="Your message"></textarea>
@@ -174,7 +182,7 @@
 	 		<div class="yes-button">Yes!</div>
 	 		<div class="music-expand hidden">
 	 			<div class="music-expand-content hidden">
-		 			<p class="music-writeup-1">I am also a musician. I play guitar, bass, and drums, and have experience with audio engineering and recording. </p>
+		 			<p class="music-writeup-1">I am also a musician! I play guitar, bass, and drums, and have experience with audio engineering and recording. </p>
 		 			<p class="music-writeup-2">Feel free to check out some of my music!</p>
 		 			<div class="music-buttons">
 			 			<a href="https://soundcloud.com/sneakyboyohboy/sets/slump" class="soundcloud-button"> SoundCloud </a>
@@ -186,7 +194,7 @@
 
 	<!-- Footer -->
 	 	<div class="footer">
-	 		<p> Handmade by me &copy; 2018.</p>
+	 		<p> Handmade by Jake Rogers &copy; 2018.</p>
 
 	 		<div class="footer-links">
 		 		<a href="https://www.linkedin.com/in/jacob-rogers-0495b7133/" class="linkedin-link"> 

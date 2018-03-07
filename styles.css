@@ -2,9 +2,10 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Quattrocento Sans';
+	font-family: 'Quattrocento Sans', sans-serif;
 	outline: none;
 	/*-webkit-box-sizing: border-box;*/
+
 }
 
 body {
@@ -17,11 +18,13 @@ body {
 	height: 100vh;
 	width: 100vw;
 	/*background: url("https://images.unsplash.com/photo-1500989145603-8e7ef71d639e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=96479273726f0c5c859499ea11593067&auto=format&fit=crop&w=1355&q=80") no-repeat;*/
-	background: url('./background.jpg') no-repeat;
+	/*background: url('./images/background.jpg') no-repeat;*/
+	background: url('./images/grey_background.png') no-repeat;
 	background-size: cover;
 	position: fixed;
 	top: 0;
 	left: 0;
+	/*border: 20px solid #159487;*/
 }
 
 .banner h1, .banner h2 {
@@ -59,7 +62,8 @@ body {
 }
 
 .banner a:hover {
-	background-color: rgba(0,0,0,0.4)
+	background-color: rgba(0,0,0,0.4);
+	transition: all ease-in-out 200ms;
 }
 
 .nav, .content{
@@ -80,7 +84,7 @@ body {
 	background-color: rgba(0,0,0,0.8);
 	margin: 0 auto;
 	text-align: center;
-	z-index: 150;
+	z-index: 3;
 	/*box-shadow: 0 2px 3px rgba(0,0,0,0.4);*/
 	margin-bottom: -50px;
 	display: flex;
@@ -100,6 +104,7 @@ body {
 
 .nav a:hover {
 	color: rgba(255,255,255,0.5);
+	transition: all ease-in-out 100ms;
 }
 
 .current-nav {
@@ -113,7 +118,7 @@ body {
 	width: 100%;
 	background-color: #F8F8F8;
 	padding-top: 50px;
-	z-index: 149;
+	z-index: 2;
 }
 
 /* About Section */
@@ -146,7 +151,14 @@ body {
 	/*height: 370px;*/
 	padding-top: 40px;
 	/*border: 1px solid black;*/
+	display: -webkit-box; 
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex; 
 	display: flex;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
 	justify-content: center;
 	padding-bottom: 50px;
 }
@@ -198,7 +210,7 @@ body {
 }
 
 .project-section {
-	/*height: 400px;*/
+	overflow: auto;
 	padding-top: 70px;
 	width: 100%;
 }
@@ -211,9 +223,13 @@ body {
 	padding-bottom: 80px;
 }
 
+.bold {
+	font-weight: bold;
+}
+
 .project-words-second {
 	display: inline-block;
-	width: 30%;
+	width: 35%;
 	float: right;
 	margin-right: 12%;
 	padding-bottom: 80px;
@@ -245,7 +261,7 @@ body {
 }
 
 .project-button {
-	width: 130px;
+	width: 150px;
 	display: block;
 	padding: 10px;
 	border: 3px solid #159487;
@@ -260,6 +276,7 @@ body {
 
 .project-button:hover {
 	background-color: #e1e1e1;
+	transition: all ease-in-out 200ms;
 	/*border: 5px solid #159487;*/
 }
 
@@ -280,9 +297,13 @@ body {
 	width: 80%;
 }
 
+.project-photo-second img {
+	width: 100%;
+}
+
 .project-photo-second {
 	display: inline-block;
-	width: 48%;
+	width: 38.4%;
 	float: left;
 	height: 300px;
 	margin-left: 10%;
@@ -291,11 +312,65 @@ body {
 
 .projects hr {
 	position: relative;
-	z-index: 3;
+	z-index: 1;
 	width: 80%;
 	margin: 0 auto;
 	margin-top: 45px;
 }
+
+.line {
+	width: 80%;
+	margin: 0 auto;
+	height: 1px;
+	background-color: #aaa;
+}
+
+/* Poetry Mashup Screenshot Modal*/
+.modal {
+  position: fixed;
+  z-index: 4;
+  left: 0;
+  top:0;
+  height: 100%;
+  width:100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color:#E8E8E8;
+  margin: 3% auto;
+  width: 90vmin;
+  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+  animation-name:modalopen;
+  animation-duration:1s;
+  border: 10px solid #159487;
+  padding: 5px;
+}
+
+.modal-img {
+	width: 100%;
+}
+
+.close-button{
+  float: right;
+  padding-right: 10px;
+  font-size:40px;
+  color:#888;
+}
+
+.close-button:hover,.close-button:focus{
+  color:#000;
+  text-decoration: none;
+  cursor:pointer;
+}
+
+@keyframes modalopen{
+  from{ opacity: 0}
+  to {opacity: 1}
+}
+
+/* End of Modal*/
 
 .see-more {
 	padding-top: 50px;
@@ -309,7 +384,7 @@ body {
 }
 
 .github-button {
-	width: 140px;
+	width: 150px;
 	display: block;
 	padding: 10px;
 	border: 3px solid #159487;
@@ -326,6 +401,7 @@ body {
 
 .github-button:hover {
 	background-color: #e1e1e1;
+	transition: all ease-in-out 200ms;
 }
 
 /* Resume Section*/
@@ -370,6 +446,7 @@ body {
 
 .resume-button:hover {
 	background-color: #ebebeb;
+	transition: all ease-in-out 200ms;
 }
 
 /* Contact Section*/
@@ -416,10 +493,12 @@ body {
 	padding-bottom: 16px;
 	border: 2px solid #159487;
 	font-size: .75em;
+
 }
 
 .input-name:focus, .input-email:focus, .input-message:focus {
 	border: 2px solid #5bb4ab;
+	color: black;
 }
 
 .input-message {
@@ -428,6 +507,13 @@ body {
 	padding-top: 9px;
 }
 
+input::-webkit-contacts-auto-fill-button {
+  visibility: hidden;
+  display: none !important;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   font-size: 15px;
@@ -464,7 +550,9 @@ input[type="submit"] {
 input[type="submit"]:hover {
 	background-color: rgba(250, 250, 250,0.8);
 	cursor: pointer;
+	transition: all ease-in-out 200ms;
 }
+
 
 
 /* Music Section */
@@ -502,6 +590,7 @@ input[type="submit"]:hover {
 .yes-button:hover {
 	background-color: rgba(250, 250, 250,0.8);
 	cursor: pointer;
+	transition: all ease-in-out 200ms;
 }
 
 .music-expand-content {
@@ -540,6 +629,7 @@ input[type="submit"]:hover {
 
 .soundcloud-button:hover, .bandcamp-button:hover {
 	background-color: rgba(250, 250, 250,0.8);
+	transition: all ease-in-out 200ms;
 }
 
 .hidden {
@@ -585,6 +675,7 @@ input[type="submit"]:hover {
 
 .linkedin-link:hover, .github-link:hover {
 	background-color: #464646;
+	transition: all ease-in-out 200ms;
 }
 
 @media (max-width: 500px) {
@@ -656,6 +747,10 @@ input[type="submit"]:hover {
 	.project-photo img, .project-photo-second img {
 		display: block;
 		margin: 0 auto;
+	}
+
+	.project-photo-second img {
+		width: 80%;
 	}
 
 	.project-words, .project-words-second {
