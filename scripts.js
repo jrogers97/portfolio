@@ -96,6 +96,11 @@ $(document).ready(function() {
     	$('.modal').removeClass('hidden');
     	$('body').css('overflow','hidden');
 
+    	if ($(window).width() <= 1.2*$(window).height()) {
+			$('.modal-content').css('width', '95%');
+		} else {
+			$('.modal-content').css('width', 1.5*0.8*$(window).height() + 'px');
+		}
     });
 
     $('.close-button').click(function(e) {
@@ -111,7 +116,9 @@ $(document).ready(function() {
     		$('.modal').addClass('hidden');
     		$('body').css('overflow','auto');
     	} 
-    })
+    });
+
+
 });
 
 
