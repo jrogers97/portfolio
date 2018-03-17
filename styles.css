@@ -305,9 +305,11 @@ body {
 .project-photo-second {
 	display: inline-block;
 	width: 38.4%;
+	/*height: calc(38.4vw / 1.6);*/
 	float: left;
-	height: 300px;
+	/*height: 300px;*/
 	margin-left: 10%;
+	padding-bottom: 80px;
 	/*border: 1px solid black;*/
 }
 
@@ -778,7 +780,27 @@ input[type="submit"]:hover {
 	}
 }
 
+@media (min-width: 1400px) {
+	body {
+		font-size: 24px;
+	}
 
+	.resume-button {
+		width: 200px;
+	}
+
+	#view-screenshot {
+		width: 175px;
+	}
+
+	.soundcloud-button {
+		width: 130px;
+	}
+
+	.bandcamp-button {
+		width: 130px;
+	}
+}
 
 
 
